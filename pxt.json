@@ -3,7 +3,8 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "mouse": "*"
+        "mouse": "*",
+        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0"
     },
     "files": [
         "main.blocks",

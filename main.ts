@@ -1,6 +1,9 @@
 namespace SpriteKind {
     export const UI = SpriteKind.create()
 }
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    blockSettings.clear()
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     controller.moveSprite(mySprite, 100, 100)
     sprites.destroy(otherSprite)
@@ -9,7 +12,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     if (info.score() > info.highScore()) {
-        game.setGameOverMessage(true, "q")
+        game.setGameOverMessage(true, "Getting better!")
         game.setGameOverEffect(true, effects.confetti)
         game.gameOver(true)
     } else {
